@@ -1,39 +1,42 @@
-import { Button, Heading, Input } from '@chakra-ui/react'
-import { FaPlus } from "react-icons/fa";
+import { Box, Button, Flex, Heading, Input, Text } from '@chakra-ui/react'
+import { FaPlus, FaHistory } from "react-icons/fa";
 import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
+    <Box p="2rem">
     {/* # Search&chat */}
-      <div>
-        <Input />
-        <div>
-            <Button />
+      <Flex flexDirection="column">
+        <Input bgColor="#FFFFFF" textColor="black"/>
+        <Button>
             <FaPlus />
-        </div>
-      </div>
+            <Text>New Chat</Text>
+        </Button>
+      </Flex>
 
       {/* # Menu */}
-      <div>
-        <div>
-            <Heading>MENU</Heading>
-        <div>
+      <Box>
+        <Heading>MENU</Heading>
+        <Text display="flex" alignItems="center">
+          <FaHistory />
             History
-        </div>
+        </Text>
 
-        <div>
+        <Text>
             Collection
-        </div>
+        </Text>
 
-        <div>
+        <Text>
             Bin
-        </div>
-        <Heading>General</Heading>
-        </div>
+        </Text>
+          <Heading>General</Heading>
+
+          <Text>
+            Settings
+          </Text>
+        </Box>
         
-      </div>
-    </div>
+    </Box>
   )
 }
 

@@ -1,14 +1,27 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider, Flex } from '@chakra-ui/react'
 import './App.css';
 import Navbar from './Components/Navbar';
+import Home from './Components/Home'
+
 
 function App() {
+  const styles = {
+    backgroundImage: "url('/assets/Rectangle 24.png')",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh', 
+    width: '100%', 
+  };
+
   return (
-    <div>
+    <Box style={styles}>
       <ChakraProvider>
-        <Navbar />
+        <Flex m="1rem">
+          <Navbar />
+          <Home />
+        </Flex>
       </ChakraProvider>
-    </div>
+    </Box>
   );
 }
 

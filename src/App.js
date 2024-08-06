@@ -14,14 +14,14 @@ function App() {
   };
 
   return (
-    <Box style={styles}>
+    <Box style={styles} overflowY="hidden">
       <ChakraProvider>
         <Flex m="1rem">
           <Navbar />
           <Home />
         </Flex>
       </ChakraProvider>
-    </Box>
+    </Box> 
   );
 }
 

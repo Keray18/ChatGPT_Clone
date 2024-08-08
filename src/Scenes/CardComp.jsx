@@ -3,7 +3,7 @@ import React from 'react'
 
 const CardComp = (props) => {
   return (
-    <Card backgroundColor="transparent" mx="1rem" w="15vw">
+    <Card bgColor="grey" bgGradient="linear(to-tl, rgba(255, 255, 255, 0.5) 24%, rgba(255, 255, 255, 0.10) 55%)" mx="1rem" w="15vw" border="1px solid red" borderRadius="1.5rem 1.5rem 1.5rem 1.5rem">
       <Flex flexDirection="column" justify="center" alignItems="center">
         <CardHeader>
         <Image borderRadius={50} width="5rem" src={props.img} alt='img' />
